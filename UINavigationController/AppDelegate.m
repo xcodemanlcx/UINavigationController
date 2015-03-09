@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "TextfieldViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[TextfieldViewController alloc] init]];
+    navVC.navigationBar.translucent = NO;// 导航栏风格
+    self.window.rootViewController = navVC;
+    
     return YES;
 }
 
